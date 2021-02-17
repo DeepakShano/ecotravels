@@ -33,9 +33,6 @@ class MyApp extends StatelessWidget {
    // fontFamily: 'Georgia',
 
 
-      //added changes in my code deepak
-
-
     // Define the default TextTheme. Use this to specify the default
     // text styling for headlines, titles, bodies of text, and more.
 

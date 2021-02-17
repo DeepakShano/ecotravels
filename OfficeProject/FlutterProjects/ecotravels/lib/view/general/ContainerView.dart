@@ -19,8 +19,6 @@ class _HomeState extends State<ContainerView> {
        selectedIndex = index;
      });
 
-
-
   }
 
    void onNavDawClicked(){
@@ -32,7 +30,7 @@ class _HomeState extends State<ContainerView> {
    Home(),
     PlaceholderWidget(Colors.deepOrange),
     PlaceholderWidget(Colors.green),
-    Home(),
+   PlaceholderWidget(Colors.lightBlueAccent),
   ];
 
   @override
@@ -48,16 +46,16 @@ class _HomeState extends State<ContainerView> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.message),
-              label: 'Message',
+              icon: Icon(Icons.local_offer_outlined),
+              label: 'Cruise Deals',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.article_outlined),
+              label: 'Articles',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications_none),
               label: 'Notification',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_rounded),
-              label: 'Profile',
             ),
           ],
           currentIndex: selectedIndex,

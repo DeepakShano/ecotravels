@@ -1,3 +1,4 @@
+import 'package:ecotravels/helper/HexColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,13 +19,35 @@ class NavigationDrawer extends StatelessWidget {
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                child: Text('Drawer Header'),
+                child: Text('User Profile'),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: HexColor("#ff753f"),
                 ),
               ),
+
               ListTile(
-                title: Text('Item 1'),
+                title: Text('Category'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+
+
+              ListTile(
+                title: Text('Blog'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+
+              ListTile(
+                title: Text('Reviews'),
                 onTap: () {
                   // Update the state of the app
                   // ...
@@ -33,7 +56,25 @@ class NavigationDrawer extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: Text('Item 2'),
+                title: Text('About Us'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('Contact Us'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('Logout'),
                 onTap: () {
                   // Update the state of the app
                   // ...

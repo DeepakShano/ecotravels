@@ -30,8 +30,7 @@ class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
             length: 6,
             child: Scaffold(
               appBar: TabBar(
-                indicatorColor: HexColor('#ff5715'
-                    ''),
+                indicatorColor: HexColor('#ff5715'),
                 isScrollable: true,
                   tabs: [
                     Tab(text: 'Details'),
