@@ -1,6 +1,7 @@
 import 'package:ecotravels/helper/HexColor.dart';
 import 'package:ecotravels/view/general/EcoTravelAppBar.dart';
 import 'package:ecotravels/view/modules/Details.dart';
+import 'package:ecotravels/view/modules/MapsView.dart';
 import 'package:flutter/material.dart';
 
 import '../PhotogalleryView.dart';
@@ -46,7 +47,7 @@ class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
                   DetailsView(),
                   PhotoGalleryView(),
                   Icon(Icons.directions_bike),
-                  Icon(Icons.directions_bike),
+                  MapsView(),
                   Icon(Icons.directions_bike),
                   Icon(Icons.directions_bike),
                 ],
