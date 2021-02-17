@@ -6,24 +6,27 @@ import 'package:get/get.dart';
 
 class EcoTravelAppBAr {
 
-  static Widget appBar(String title, String ImgUrl) {
+  static Widget appBar(String title, String ImgUrl,bool visiblity) {
     return SliverAppBar(
       backgroundColor: Colors.white10,
-      expandedHeight: 200,
+      expandedHeight: 220,
       pinned: true,
       leading: Center(
         child: InkWell(
           onTap: () {
             Get.back();
           },
-          child: CircleAvatar(
-            radius: 10.0,
-            backgroundColor: Colors.white,
-            child: Center(
-              child: Icon(
-                Icons.arrow_back_ios_outlined,
-                size: 10,
-                color: Colors.grey,
+          child: Visibility(
+            visible:visiblity,
+            child: CircleAvatar(
+              radius: 10.0,
+              backgroundColor: Colors.white,
+              child: Center(
+                child: Icon(
+                  Icons.arrow_back_ios_outlined,
+                  size: 10,
+                  color: Colors.grey,
+                ),
               ),
             ),
           ),
@@ -39,7 +42,7 @@ centerTitle: true,
         ),),
         background: Image(
           image: NetworkImage(
-              'https://www.metimeaway.com/wp-content/uploads/2019/11/sustainable-travel.jpg'),
+              ImgUrl),
           fit: BoxFit.cover,
           height: double.infinity,
           width: double.infinity,

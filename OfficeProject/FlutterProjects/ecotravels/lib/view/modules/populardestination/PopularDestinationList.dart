@@ -24,7 +24,7 @@ class _PopularDestinaltionList extends State<PopularDestinaltionList> {
           floatHeaderSlivers: true,
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
-              EcoTravelAppBAr.appBar("Asia", ""),
+              EcoTravelAppBAr.appBar("Asia", 'https://www.metimeaway.com/wp-content/uploads/2019/11/sustainable-travel.jpg',true)
             ];
           },
           body: ListView.builder(

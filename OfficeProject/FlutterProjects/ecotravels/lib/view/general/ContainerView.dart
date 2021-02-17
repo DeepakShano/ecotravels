@@ -1,5 +1,6 @@
 import 'package:ecotravels/view/general/NavigationDrawer.dart';
 import 'package:ecotravels/helper/PlaceholderWidget.dart';
+import 'package:ecotravels/view/modules/CruiseDeals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,17 +28,16 @@ class _HomeState extends State<ContainerView> {
      });
    }
   final List<Widget> _children = [
-   Home(),
+    Home(),
+    CruiseDeals(),
     PlaceholderWidget(Colors.deepOrange),
     PlaceholderWidget(Colors.green),
-   PlaceholderWidget(Colors.lightBlueAccent),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-
         bottomNavigationBar:BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
