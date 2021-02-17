@@ -24,7 +24,8 @@ class _CruiseDealsTab extends State<CruiseDeals> {
           floatHeaderSlivers: true,
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
-              EcoTravelAppBAr.appBar("Cruise Deals", 'https://data.whicdn.com/images/326611687/original.jpg',false),
+              EcoTravelAppBAr.appBar("Weastren Europe", 'https://data.whicdn.com/images/326611687/original.jpg',false,false ),
+
             ];
           },
           body: ListView.builder(
@@ -49,7 +50,7 @@ class _CruiseDealsTab extends State<CruiseDeals> {
   _CruiseDealsListContent() {
     return InkWell(
       onTap: (){
-        Get.to(MyVideoPlayer());
+        Get.to(PopularDestinationDetailsView());
       },
       child: Card(
         color: Colors.white,

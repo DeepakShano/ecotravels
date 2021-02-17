@@ -4,6 +4,7 @@ import 'package:ecotravels/view/modules/Details.dart';
 import 'package:ecotravels/view/modules/MapsView.dart';
 import 'package:flutter/material.dart';
 
+
 import '../PhotogalleryView.dart';
 
 class PopularDestinationDetailsView extends StatefulWidget {
@@ -11,12 +12,11 @@ class PopularDestinationDetailsView extends StatefulWidget {
   _DestinationDetailsViewTab createState() => _DestinationDetailsViewTab();
 }
 
-
 class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
-
+  
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
         color: Colors.white,
         child: NestedScrollView(
           // Setting floatHeaderSlivers to true is required in order to float
@@ -24,24 +24,29 @@ class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
           floatHeaderSlivers: true,
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
-              EcoTravelAppBAr.appBar("Asia", 'https://www.metimeaway.com/wp-content/uploads/2019/11/sustainable-travel.jpg',true),
+              EcoTravelAppBAr.appBar(
+                  "Asia",
+                  'https://www.metimeaway.com/wp-content/uploads/2019/11/sustainable-travel.jpg',
+                  true,true),
+
+
             ];
           },
-          body:DefaultTabController(
+          body: DefaultTabController(
             length: 6,
             child: Scaffold(
               appBar: TabBar(
                 indicatorColor: HexColor('#ff5715'),
                 isScrollable: true,
-                  tabs: [
-                    Tab(text: 'Details'),
-                    Tab(text: 'Photos'),
-                    Tab(text: 'Itineray'),
-                    Tab(text: 'Maps'),
-                    Tab(text: 'FAQ'),
-                    Tab(text: 'Reviews')
-                  ],
-                ),
+                tabs: [
+                  Tab(text: 'Details'),
+                  Tab(text: 'Photos'),
+                  Tab(text: 'Itineray'),
+                  Tab(text: 'Maps'),
+                  Tab(text: 'FAQ'),
+                  Tab(text: 'Reviews')
+                ],
+              ),
               body: TabBarView(
                 children: [
                   DetailsView(),
@@ -56,7 +61,6 @@ class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
           ),
         ));
   }
-
 
 
 

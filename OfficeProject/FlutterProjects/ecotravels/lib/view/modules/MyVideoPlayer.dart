@@ -1,9 +1,12 @@
+import 'package:ecotravels/view/general/EcoTravelAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class MyVideoPlayer extends StatefulWidget {
+
   @override
   _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
 }
@@ -21,7 +24,6 @@ class _VideoPlayerScreenState extends State<MyVideoPlayer> {
         autoPlay: true,
         mute: false,
         loop: false,
-        hideControls: true,
         enableCaption: false,
 
       ),
@@ -43,19 +45,49 @@ class _VideoPlayerScreenState extends State<MyVideoPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    return YoutubePlayerBuilder(
-        player: YoutubePlayer(
-          controller: _controller,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        toolbarHeight: 40,
+        leading: Builder(
+          builder: (context) => Center(
+            child: IconButton(
+              onPressed: () => Get.back(),
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: 25,
+                color: Colors.grey,
+              ),
+            ),
+          ),
         ),
-        builder: (context, player) {
-          return Column(
-            children: [
-              // some widgets
-              player,
-              //some other widgets
-            ],
-          );
-        });
+
+        elevation: 0,
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: Text(
+          "",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+          ),
+        ),
+      ),
+      body: YoutubePlayerBuilder(
+          player: YoutubePlayer(
+            controller: _controller,
+          ),
+          builder: (context, player) {
+            return Column(
+              mainAxisAlignment:MainAxisAlignment.center,
+              children: [
+                // some widgets
+                player,
+                //some other widgets
+              ],
+            );
+          }),
+    );
   }
 
 

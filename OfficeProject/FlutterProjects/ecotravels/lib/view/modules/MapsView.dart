@@ -56,6 +56,17 @@ class MapSampleState extends State<MapsView> {
 
   void _onMapCreated(GoogleMapController controller) async {
     mapController = controller;
+    // Defining an ID
+    PolylineId id = PolylineId('poly');
+
+    // Initializing Polyline
+    Polyline polyline = Polyline(
+      polylineId: id,
+      color: Colors.red,
+      points: polylineCoordinates,
+      width: 5,
+    );
+    polylines[id] = polyline;
   }
 
   _addMarker(LatLng position, String id, BitmapDescriptor descriptor) {
@@ -65,27 +76,21 @@ class MapSampleState extends State<MapsView> {
     markers[markerId] = marker;
   }
 
-  _addPolyLine() {
-    PolylineId id = PolylineId("poly");
-    Polyline polyline = Polyline(
-        polylineId: id, color: Colors.deepOrange, points: polylineCoordinates);
-    polylines[id] = polyline;
-    setState(() {});
-  }
+
 
   _getPolyline() async {
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
         "AIzaSyAnyJML1g26tJ0p70bd79qbI8fZKZI89ZI",
         PointLatLng(_originLatitude, _originLongitude),
         PointLatLng(_destLatitude, _destLongitude),
-      travelMode: TravelMode.transit,
+      travelMode: TravelMode.driving,
     );
     if (result.points.isNotEmpty) {
       result.points.forEach((PointLatLng point) {
         polylineCoordinates.add(LatLng(point.latitude, point.longitude));
       });
     }
-    _addPolyLine();
+
   }
 
 
