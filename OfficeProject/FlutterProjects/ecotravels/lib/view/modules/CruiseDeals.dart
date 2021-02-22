@@ -1,6 +1,5 @@
 import 'package:ecotravels/helper/HexColor.dart';
 import 'package:ecotravels/view/general/EcoTravelAppBar.dart';
-import 'package:ecotravels/view/modules/MyVideoPlayer.dart';
 import 'package:ecotravels/view/modules/populardestination/PopularDestinationDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,7 @@ class _CruiseDealsTab extends State<CruiseDeals> {
           floatHeaderSlivers: true,
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
-              EcoTravelAppBAr.appBar("Weastren Europe", 'https://data.whicdn.com/images/326611687/original.jpg',false,false ),
+              EcoTravelAppBAr.appBar("Western Europe", 'https://data.whicdn.com/images/326611687/original.jpg',false,false ),
 
             ];
           },

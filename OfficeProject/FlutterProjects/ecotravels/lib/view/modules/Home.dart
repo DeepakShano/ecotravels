@@ -4,8 +4,10 @@ import 'package:ecotravels/controller/HomeController.dart';
 import 'package:ecotravels/helper/GlobalClass.dart';
 import 'package:ecotravels/helper/HexColor.dart';
 import 'package:ecotravels/view/general/NavigationDrawer.dart';
+import 'package:ecotravels/view/modules/SearchView.dart';
 import 'package:ecotravels/view/modules/populardestination/PopularDestinationDetails.dart';
 import 'package:ecotravels/view/modules/populardestination/PopularDestinationList.dart';
+import 'package:ecotravels/view/modules/viewProfile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -105,7 +107,7 @@ class _HomeState extends State<Home> {
                       borderRadius: BorderRadius.circular(18.0),
                       side: BorderSide(color: Colors.transparent)),
                   color: HexColor('#ff753f'),
-                  onPressed: () => print("Button Pressed"),
+                  onPressed: () => Get.to(SearchView()),
                   child: new Text(
                     "Search",
                     style: TextStyle(color: Colors.white, fontSize: 14),
@@ -254,10 +256,15 @@ class _HomeState extends State<Home> {
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   child: Center(
-                    child: Icon(
-                      Icons.account_circle_rounded,
-                      size: 28,
-                      color: Colors.grey,
+                    child: InkWell(
+                      onTap: (){
+                       Get.to( ViewProfile());
+                      },
+                      child: Icon(
+                        Icons.account_circle_rounded,
+                        size: 28,
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
                 ),

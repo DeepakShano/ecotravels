@@ -1,5 +1,4 @@
 import 'package:ecotravels/helper/HexColor.dart';
-import 'package:ecotravels/view/general/ContainerView.dart';
 import 'package:ecotravels/view/login/LoginView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       systemNavigationBarIconBrightness:Brightness.light ,
     ));
     return GetMaterialApp(
-      home: ContainerView(),
+      home:CreateAccount(),
     theme: ThemeData(
     // Define the default brightness and colors.
         primaryTextTheme:TextTheme(

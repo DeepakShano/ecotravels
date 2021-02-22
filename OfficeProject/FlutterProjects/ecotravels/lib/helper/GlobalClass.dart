@@ -99,4 +99,108 @@ class GlobalClass {
  }
 
 
+
+ static mTextField(String label, TextEditingController mController) {
+   return TextFormField(
+     controller: mController,
+     decoration: InputDecoration(
+       labelStyle: TextStyle(color: Colors.black54),
+       fillColor: HexColor("#f5f7fa"),
+       filled: true,
+       labelText: label,
+       border: new OutlineInputBorder(
+         borderRadius: const BorderRadius.all(
+           const Radius.circular(10.0),
+         ),
+         borderSide: BorderSide(
+           color: Colors.transparent,
+         ),
+       ),
+       focusedBorder: OutlineInputBorder(
+         borderRadius: BorderRadius.circular(10.0),
+         borderSide: BorderSide(
+           color: Colors.transparent,
+         ),
+       ),
+       enabledBorder: OutlineInputBorder(
+         borderRadius: BorderRadius.circular(10.0),
+         borderSide: BorderSide(
+           color: Colors.transparent,
+         ),
+       ),
+     ),
+   );
+ }
+
+ static mDobField(String label, TextEditingController mController, context) {
+   return TextFormField(
+       controller: mController,
+       decoration: InputDecoration(
+         labelStyle: TextStyle(color: Colors.black54),
+         fillColor: HexColor("#f5f7fa"),
+         filled: true,
+         labelText: label,
+         border: new OutlineInputBorder(
+           borderRadius: const BorderRadius.all(
+             const Radius.circular(10.0),
+           ),
+           borderSide: BorderSide(
+             color: Colors.transparent,
+           ),
+         ),
+         focusedBorder: OutlineInputBorder(
+           borderRadius: BorderRadius.circular(10.0),
+           borderSide: BorderSide(
+             color: Colors.transparent,
+           ),
+         ),
+         enabledBorder: OutlineInputBorder(
+           borderRadius: BorderRadius.circular(10.0),
+           borderSide: BorderSide(
+             color: Colors.transparent,
+           ),
+         ),
+       ),
+       onTap: () async {
+         mController.text =  await selectDate(context) as String;;
+       });
+ }
+
+ static Widget appBar(String title) {
+   return AppBar(
+     brightness: Brightness.light, // status bar brightness
+     leading: Center(
+       child: InkWell(
+         onTap: () {
+           Get.back();
+         },
+         child: Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: CircleAvatar(
+             radius: 12.0,
+             backgroundColor: Colors.deepOrange,
+             child: Center(
+               child: Icon(
+                 Icons.arrow_back_ios_outlined,
+                 size: 12,
+                 color: Colors.white,
+               ),
+             ),
+           ),
+         ),
+       ),
+     ),
+     elevation: 0,
+     backgroundColor: Colors.white,
+     centerTitle: true,
+     title: Text(
+       title,
+       style: TextStyle(
+         color: Colors.black,
+         fontSize: 18,
+       ),
+     ),
+   );
+ }
+
 }

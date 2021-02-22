@@ -1,8 +1,6 @@
-import 'package:ecotravels/view/general/EcoTravelAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class MyVideoPlayer extends StatefulWidget {
@@ -19,7 +17,7 @@ class _VideoPlayerScreenState extends State<MyVideoPlayer> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: 'eZjmjT5SLYs',
+      initialVideoId: 'igTDc1Ov7FM',
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
@@ -39,7 +37,10 @@ class _VideoPlayerScreenState extends State<MyVideoPlayer> {
   void dispose() {
     // Ensure disposing of the VideoPlayerController to free up resources.
     _controller.dispose();
-
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     super.dispose();
   }
 

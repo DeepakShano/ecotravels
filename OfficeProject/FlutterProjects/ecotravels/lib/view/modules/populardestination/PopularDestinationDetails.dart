@@ -1,10 +1,12 @@
 import 'package:ecotravels/helper/HexColor.dart';
 import 'package:ecotravels/view/general/EcoTravelAppBar.dart';
 import 'package:ecotravels/view/modules/Details.dart';
+import 'package:ecotravels/view/modules/Itinerary.dart';
 import 'package:ecotravels/view/modules/MapsView.dart';
 import 'package:flutter/material.dart';
 
 
+import '../FAQView.dart';
 import '../PhotogalleryView.dart';
 
 class PopularDestinationDetailsView extends StatefulWidget {
@@ -51,9 +53,9 @@ class _DestinationDetailsViewTab extends State<PopularDestinationDetailsView> {
                 children: [
                   DetailsView(),
                   PhotoGalleryView(),
-                  Icon(Icons.directions_bike),
+                  ItineraryView(),
                   MapsView(),
-                  Icon(Icons.directions_bike),
+                  FAQView(),
                   Icon(Icons.directions_bike),
                 ],
               ),

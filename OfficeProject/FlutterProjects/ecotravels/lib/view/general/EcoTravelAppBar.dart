@@ -22,13 +22,13 @@ class EcoTravelAppBAr {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
-                radius: 10.0,
-                backgroundColor: Colors.white,
+                radius: 12.0,
+                backgroundColor: Colors.deepOrange,
                 child: Center(
                   child: Icon(
                     Icons.arrow_back_ios_outlined,
-                    size: 10,
-                    color: Colors.grey,
+                    size: 12,
+                    color: Colors.white,
                   ),
                 ),
               ),

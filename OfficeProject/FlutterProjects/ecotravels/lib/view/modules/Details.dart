@@ -79,7 +79,9 @@ class _DetailsViewTab extends State<DetailsView> {
             child: Text(
               'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.\n\nLorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Comma wild Question Marks.',
               textAlign: TextAlign.justify,
-              style: TextStyle(color: HexColor('#41474f'), fontSize: 12),
+              style: TextStyle(color: HexColor('#41474f'), fontSize: 12,
+                  fontFamily: 'assets/fonts/circularstd_book.otf' ,
+                  height: 1.5,),
             ),
           ),
           Divider(
@@ -152,6 +154,8 @@ class _DetailsViewTab extends State<DetailsView> {
                   style: TextStyle(
                     color: HexColor('#41474f'),
                     fontSize: 12,
+                    fontFamily: 'assets/fonts/circularstd_book.otf' ,
+                    height: 1.5,
                   )))
         ],
       ),
